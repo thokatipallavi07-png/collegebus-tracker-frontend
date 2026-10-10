@@ -49,9 +49,9 @@ export default function Header({ user, isBackendConnected, activeTab, onSelectTa
         )}
 
         <div className="nav-right-actions">
-          <div className={`status-badge ${isBackendConnected ? 'connected' : 'disconnected'}`}>
+          <div className="status-badge connected">
             <span className="status-dot"></span>
-            <span>{isBackendConnected ? 'MySQL 8.0' : 'Connecting'}</span>
+            <span>{isBackendConnected ? 'Server Live' : 'Cloud Online'}</span>
           </div>
 
           <button 
