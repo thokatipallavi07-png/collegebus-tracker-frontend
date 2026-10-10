@@ -1,5 +1,6 @@
 // Centralized API client for Spring Boot Backend & MySQL
-const API_BASE = 'http://localhost:8081/api';
+// Set VITE_API_BASE_URL in Netlify environment variables to point to your deployed backend
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8081/api';
 
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
